@@ -12,18 +12,13 @@ where $i$ is the market price provided by the oracle, and $R$ is is defined to b
 
 If $B < B_{0}$, then $$R=1-k+(\frac{B_{0}}{B})^{2}k$$ $$R=1/(1-k+(\frac{Q_{0}}{Q})^{2}k)$$
 
-If $Q < Q_{0}$, then $$R=1/(1-k+(\frac{Q_{0}}{Q})^{2}k)$$
-
-
-
-$$ f(x)=\left\{
-\begin{aligned}
-x & = & \cos(t) \\
-y & = & \sin(t) \\
-z & = & \frac xy
-\end{aligned}
-\right.
-$$
+$$ F^{HLLC}=\left\{
+\begin{array}{rcl}
+F_L       &      & {0      <      S_L}\\
+F^*_L     &      & {S_L \leq 0 < S_M}\\
+F^*_R     &      & {S_M \leq 0 < S_R}\\
+F_R       &      & {S_R \leq 0}
+\end{array} \right. $$
 
 
 where $k$ is the liquidity parameter set in advance. As we can see, when $k$ is 0, the protocol naively sells or buys at the market price, with no promotion on the liquidity balance. When $k$ increases to 1, the algorithm becomes the standard AMM. Normally, $k$ is recommended to be a relatively small value, such as 0.1, which could provide liquidity 10 times better than the standard AMM algorithm.

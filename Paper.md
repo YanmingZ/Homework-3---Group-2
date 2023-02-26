@@ -10,9 +10,9 @@ $$P=iR$$
 
 where $i$ is the market price provided by the oracle, and $R$ is is defined to be the piecewise function below:
 
-$$If $B < B_{0}$, $R=1-k+(\frac{B_{0}}{B})^{2}k$$$
-$$If $Q < Q_{0}$, $R=1/(1-k+(\frac{Q_{0}}{Q})^{2}k)$$$
-$$Else, $R=1$$$
+$$If $B < B_{0}$, $R=1-k+(\frac{B_{0}}{B})^{2}k$
+If $Q < Q_{0}$, $R=1/(1-k+(\frac{Q_{0}}{Q})^{2}k)$
+Else, $R=1$$
 
 where $k$ is the liquidity parameter set in advance. As we can see, when $k$ is 0, the protocol naively sells or buys at the market price, with no promotion on the liquidity balance. When $k$ increases to 1, the algorithm becomes the standard AMM. Normally, $k$ is recommended to be a relatively small value, such as 0.1, which could provide liquidity 10 times better than the standard AMM algorithm.
 

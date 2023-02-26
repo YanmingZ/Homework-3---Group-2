@@ -1,6 +1,6 @@
 # Research on DODODex applying Proactive AMM
 
-# 2. The machanism of DODODex
+### 2. The machanism of DODODex
 
 In traditional AMMs, liquidity providers (LPs) deposit equal amounts of two assets into a pool and receive tokens representing their share of the pool. Trades occur by swapping one asset for another, and the price is determined based on the ratio of the two assets in the pool. However, when there is high demand for one asset and low demand for another, the price can become volatile and lead to impermanent loss for LPs. Proactive AMMs aim to mitigate this risk by dynamically adjusting the pool ratio based on recent trades and external data from an oracle.
 
@@ -18,7 +18,7 @@ where $k$ is the liquidity parameter set in advance. As we can see, when $k$ is 
 
 In conclusion, when a trader sells/sells base tokens, the base token balance of the capital pool is higher/lower than the base token regression target; conversely, the quote token balance is now lower/higher than the quote token regression target. In this state, the pAMM will try to sell the excess/buy the shortage base tokens, lowering/highering the base token balance and increasing/decreasing the quote token balance, in order to move this state back to the state of equilibrium. 
 
-# 3. The use cases of DODODex
+### 3. The use cases of DODODex
 
 Proactive Automated Market Making aims at minimizing impermanent loss and maximizing capital efficiency by incorporating external price guidance and customized pricing strategies. There are several use cases where PMM can be particularly beneficial:
 

@@ -10,7 +10,7 @@ $$P_{margin}=iR$$
 
 where $i$ is the market price provided by the oracle, and $R$ is is defined to be the piecewise function below:
 
-If $B < B_{0}$, then $$R=1-k+(\frac{B_{0}}{B})^{2}k$$
+If $B < B_{0}$, then $$R=1-k+(\frac{B_{0}}{B})^{2}k$$\\$a$
 If $Q < Q_{0}$, then $$R=1/(1-k+(\frac{Q_{0}}{Q})^{2}k)$$
 
 

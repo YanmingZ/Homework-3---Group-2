@@ -14,6 +14,8 @@ If $B < B_{0}$, then $$R=1-k+(\frac{B_{0}}{B})^{2}k$$ $$R=1/(1-k+(\frac{Q_{0}}{Q
 
 If $Q < Q_{0}$, then $$R=1/(1-k+(\frac{Q_{0}}{Q})^{2}k)$$
 
+
+
 $$ f(x)=\left\{
 \begin{aligned}
 x & = & \cos(t) \\

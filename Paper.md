@@ -14,6 +14,15 @@ If $B < B_{0}$, then $$R=1-k+(\frac{B_{0}}{B})^{2}k$$ $$R=1/(1-k+(\frac{Q_{0}}{Q
 
 If $Q < Q_{0}$, then $$R=1/(1-k+(\frac{Q_{0}}{Q})^{2}k)$$
 
+$$ f(x)=\left\{
+\begin{aligned}
+x & = & \cos(t) \\
+y & = & \sin(t) \\
+z & = & \frac xy
+\end{aligned}
+\right.
+$$
+
 
 where $k$ is the liquidity parameter set in advance. As we can see, when $k$ is 0, the protocol naively sells or buys at the market price, with no promotion on the liquidity balance. When $k$ increases to 1, the algorithm becomes the standard AMM. Normally, $k$ is recommended to be a relatively small value, such as 0.1, which could provide liquidity 10 times better than the standard AMM algorithm.
 

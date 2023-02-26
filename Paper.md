@@ -17,3 +17,17 @@ If $B = B_{0}$, which is equivalent to $Q = Q_{0}$, then $$R=1$$
 where $k$ is the liquidity parameter set in advance. As we can see, when $k$ is 0, the protocol naively sells or buys at the market price, with no promotion on the liquidity balance. When $k$ increases to 1, the algorithm becomes the standard AMM. Normally, $k$ is recommended to be a relatively small value, such as 0.1, which could provide liquidity 10 times better than the standard AMM algorithm.
 
 In conclusion, when a trader sells/sells base tokens, the base token balance of the capital pool is higher/lower than the base token regression target; conversely, the quote token balance is now lower/higher than the quote token regression target. In this state, the pAMM will try to sell the excess/buy the shortage base tokens, lowering/highering the base token balance and increasing/decreasing the quote token balance, in order to move this state back to the state of equilibrium. 
+
+### 3. The use cases of DODODex
+
+Proactive Automated Market Making aims at minimizing impermanent loss and maximizing capital efficiency by incorporating external price guidance and customized pricing strategies. There are several use cases where PMM can be particularly beneficial:
+
+The first one is proactive market making with external price guidance. PMM can retrieve market prices from external sources for mainstream assets like BTC and ETH to adjust mid-prices and minimize impermanent loss. This use case enables single-token liquidity provision and unlocks higher capital efficiency than traditional AMM platforms.
+
+PMM also allows for low barrier-to-entry automated market making. For long-tail asset markets, PMM can help asset issuers with initial liquidity without requiring large amounts of capital to pair up with assets. This use case gives pricing power to takers entirely and drastically reduces the barrier-to-entry for smaller projects.
+
+PMM also provide the possibility to create fully customizable liquidity pools and free market making. This use case is intended for experienced and ambitious market makers who want the highest degree of freedom and customizability possible to execute their own market making strategies. Market makers have full control over all pool parameters, can dynamically adjust the asset price, and can deposit to and withdraw from these liquidity pools in arbitrary ratios, without affecting the asset price.
+
+Another important use case is Crowdpooling. This use case is an innovation compared to current asset issuance mechanics. Crowdpooling allows participants to receive tokens at the same unit price and enables token trading after the conclusion of the sale. The remaining unsold tokens and liquidity collected from the last phase are used to construct a DODO Vending Machine.
+
+Finally, PMM are also capable of supporting stablecoin trading scenarios. PMM with configurations i = 1 and k = 0.001 (or 0 for 1-to-1 ratio) is virtually identical to Curve in terms of performance and capital efficiency, with the added benefit of flexibility.

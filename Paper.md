@@ -6,7 +6,7 @@ In traditional AMMs, liquidity providers (LPs) deposit equal amounts of two asse
 
 Suppose that $B_{0}$ and $Q_{O}$ are the initial amounts of base and quote tokens deposited by the liquidity providers respectively. In the meantime, we use $B$ and $Q$ to denote the current amounts of base and quote tokens in the pool. As can be seen easily, the target of pAMM is to keep $\frac{B}{Q}$ as closer to $\frac{B_{0}}{Q_{0}}$ as possible. When the ratio of assets in pool change, the pAMM will proactively alter the prices based on a mathematical model and imputs from an oracle, encouraging traders to push the ratio of assets to the initial level through arbitrages. The marginal prices of base and quote tokens are calculated as below:
 
-$$P=iR$$
+$$P_{margin}=iR$$
 
 where $i$ is the market price provided by the oracle, and $R$ is is defined to be the piecewise function below:
 

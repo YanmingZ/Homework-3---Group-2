@@ -1,4 +1,4 @@
-## Research on DODODex applying Proactive AMM
+# Research on DODODex applying Proactive AMM
 
 ### 1. DODODex's protocol, its products and our evaluation 
 DODO is a decentralized exchange (DEX) that offers a range of permissionless liquidity products and solutions, including liquidity pools, crowdpooling, and fractionalized NFTs. The DODO is built on a set of smart contracts that enable a range of core features, including the DODO Vending Machine, DODO Private Pool, Crowdpooling, Liquidity Management, SmartTrade, and DODOnomics. One of the key features of DODO is its Proactive Market Making (PMM) algorithm, which is designed to efficiently incorporate important market information to enable dynamic and effective market making in the face of changing market conditions and to provide efficient liquidity provision. The PMM algorithm uses oracles to determine the actual price of an asset, and then ensures sufficient liquidity at or near this market price, while reducing availability further out, making it more efficient than traditional Automated Market Makers.
@@ -30,3 +30,17 @@ If $B = B_{0}$, which is equivalent to $Q = Q_{0}$, then $$R=1$$
 where $k$ is the liquidity parameter set in advance. As we can see, when $k$ is 0, the protocol naively sells or buys at the market price, with no promotion on the liquidity balance. When $k$ increases to 1, the algorithm becomes the standard AMM. Normally, $k$ is recommended to be a relatively small value, such as 0.1, which could provide liquidity 10 times better than the standard AMM algorithm.
 
 In conclusion, when a trader sells/sells base tokens, the base token balance of the capital pool is higher/lower than the base token regression target; conversely, the quote token balance is now lower/higher than the quote token regression target. In this state, the pAMM will try to sell the excess/buy the shortage base tokens, lowering/highering the base token balance and increasing/decreasing the quote token balance, in order to move this state back to the state of equilibrium. 
+
+### 3. The use cases of DODODex
+
+Proactive Automated Market Making aims at minimizing impermanent loss and maximizing capital efficiency by incorporating external price guidance and customized pricing strategies. There are several use cases where PMM can be particularly beneficial:
+
+The first one is proactive market making with external price guidance. PMM can retrieve market prices from external sources for mainstream assets like BTC and ETH to adjust mid-prices and minimize impermanent loss. This use case enables single-token liquidity provision and unlocks higher capital efficiency than traditional AMM platforms.
+
+PMM also allows for low barrier-to-entry automated market making. For long-tail asset markets, PMM can help asset issuers with initial liquidity without requiring large amounts of capital to pair up with assets. This use case gives pricing power to takers entirely and drastically reduces the barrier-to-entry for smaller projects.
+
+PMM also provide the possibility to create fully customizable liquidity pools and free market making. This use case is intended for experienced and ambitious market makers who want the highest degree of freedom and customizability possible to execute their own market making strategies. Market makers have full control over all pool parameters, can dynamically adjust the asset price, and can deposit to and withdraw from these liquidity pools in arbitrary ratios, without affecting the asset price.
+
+Another important use case is Crowdpooling. This use case is an innovation compared to current asset issuance mechanics. Crowdpooling allows participants to receive tokens at the same unit price and enables token trading after the conclusion of the sale. The remaining unsold tokens and liquidity collected from the last phase are used to construct a DODO Vending Machine.
+
+Finally, PMM are also capable of supporting stablecoin trading scenarios. PMM with configurations i = 1 and k = 0.001 (or 0 for 1-to-1 ratio) is virtually identical to Curve in terms of performance and capital efficiency, with the added benefit of flexibility.
